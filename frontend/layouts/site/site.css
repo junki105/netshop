@@ -1,0 +1,7 @@
+/* frontend/layouts/site/site.css */
+.site {
+  height: 100vh;
+  width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
