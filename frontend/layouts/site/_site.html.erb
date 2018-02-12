@@ -1,4 +1,86 @@
 <!-- frontend/layouts/site/_site.html.erb -->
 <div class="site">
+  <section class="hero is-info">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item title" style="margin-bottom: 0;">
+              Online Shop
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroB" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                Home
+              </a>
+              <a class="navbar-item">
+                Login
+              </a>
+              <a class="navbar-item">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="field is-grouped">
+          <div class="control has-icons-left is-expanded">
+            <input value="" name="text" class="input is-flat required is-medium" placeholder="search shop item" required="" type="text">
+            <span class="icon is-small is-left">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <div class="control">
+            <input value="Search" name="submit" id="mc-embedded-subscribe" class="button is-white is-outlined is-medium" type="submit">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <nav class="tabs is-boxed is-fullwidth">
+        <div class="container">
+          <ul>
+            <li class="is-active">
+              <a>Overview</a>
+            </li>
+            <li>
+              <a>Ladies</a>
+            </li>
+            <li>
+              <a>Mens</a>
+            </li>
+            <li>
+              <a>Children</a>
+            </li>
+            <li>
+              <a>Babies</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  
   <%= yield %>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content">
+        <p>
+          © Online Shop <%= Time.now.year %>. 
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
