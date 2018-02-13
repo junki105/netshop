@@ -1,0 +1,13 @@
+en:
+  site:
+    title: "Online Shop"
+  date:
+    formats:
+      default: "%m/%d/%Y"
+      long: "%B %d, %Y"
+      short: "%m.%d.%y"
+  time:
+    formats:
+      default: "%m/%d/%Y %H:%M:%S"
+      long: "%B %d, %Y %H時%M分%S秒 %z"
+      short: "%m.%d.%y %H:%M"

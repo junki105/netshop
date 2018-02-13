@@ -5,9 +5,7 @@
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item title" style="margin-bottom: 0;">
-              Online Shop
-            </a>
+            <%= link_to t('site.title'), root_url(locale: I18n.locale), class: 'navbar-item title', style: 'margin-bottom: 0;' %>
             <span class="navbar-burger burger" data-target="navbarMenuHeroB">
               <span></span>
               <span></span>
@@ -25,6 +23,20 @@
               <a class="navbar-item">
                 <i class="fas fa-shopping-cart"></i>
               </a>
+              <div class="navbar-item">
+                <div class="control has-icons-left">
+                  <div class="select is-small is-rounded">
+                    <select id="selectedLocale">
+                      <% [:en, :ja].each do |locale| %>
+                        <option data-url="<%= url_for Rails.application.routes.recognize_path(request.url).merge({ only_path: false, locale: locale }) %>"<%= I18n.locale == locale ? ' selected' : '' %>><%= locale %></option>
+                      <% end %>
+                    </select>
+                  </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
