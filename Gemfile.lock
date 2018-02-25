@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/globalize/globalize
+  revision: e946e63983d42c9ff49b39b13ffcc3ad45626dd3
+  specs:
+    globalize (5.1.0)
+      activemodel (>= 4.2, < 5.2)
+      activerecord (>= 4.2, < 5.2)
+      request_store (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -104,6 +113,8 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    request_store (1.4.0)
+      rack (>= 1.4)
     ruby_dep (1.5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -142,6 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  globalize!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.3.18, < 0.5)

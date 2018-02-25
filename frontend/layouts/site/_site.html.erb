@@ -62,23 +62,7 @@
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
-          <ul>
-            <li class="is-active">
-              <a>Overview</a>
-            </li>
-            <li>
-              <a>Ladies</a>
-            </li>
-            <li>
-              <a>Mens</a>
-            </li>
-            <li>
-              <a>Children</a>
-            </li>
-            <li>
-              <a>Babies</a>
-            </li>
-          </ul>
+          <%= content_tag(:ul) { @categories.each { |category| concat(content_tag(:li, link_to(category.name, '#'))) } } %>
         </div>
       </nav>
     </div>
