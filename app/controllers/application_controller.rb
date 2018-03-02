@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   before_action :init_category
 
   def init_category
-    @categories = Category.where(state: true).order(id: :asc)
+    @categories = Category.where(state: true).where(parent: nil).order(id: :asc)
   end
 end

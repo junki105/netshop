@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224151158) do
+ActiveRecord::Schema.define(version: 20180301160221) do
 
   create_table "categories", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", default: "", null: false
     t.boolean "state", default: true, null: false
+    t.bigint "parent_id", unsigned: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_categories_on_parent_id"
   end
 
   create_table "category_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -29,4 +31,5 @@ ActiveRecord::Schema.define(version: 20180224151158) do
     t.index ["locale"], name: "index_category_translations_on_locale"
   end
 
+  add_foreign_key "categories", "categories", column: "parent_id"
 end
