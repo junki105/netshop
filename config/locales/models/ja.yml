@@ -1,0 +1,25 @@
+ja:
+  activerecord: &activerecord
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        id: "ID"
+        email: "メールアドレス"
+        crypted_password: "パスワード"
+        salt: "Salt"
+        created_at: "登録日時"
+        updated_at: "更新日時"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "が入力されていません。"
+              taken: "は既に登録されています。"
+            password:
+              blank: "が入力されていません。"
+              too_short: "が短すぎます。"
+            password_confirmation:
+              blank: "が入力されていません。"
+              confirmation: "がパスワードと一致しません"

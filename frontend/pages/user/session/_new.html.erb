@@ -1,0 +1,49 @@
+<div class="user-session">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="box">
+                        <h1 class="title has-text-centered is-size-4">Signin</h1>
+                        <hr>
+                        <%= form_for(@user ||= User.new, url: users_sessions_path, html: { medhod: :post }) do |f| %>
+                             <% if @user.errors.any? %>
+                                <div class="notification is-danger">
+                                    <ul>
+                                        <% @user.errors.full_messages.each do |message| %>
+                                            <li><%= message %></li>
+                                        <% end %>
+                                    </ul>
+                                </div>
+                            <% end %>
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left">
+                                    <%= f.email_field :email, class: "input", placeholder: 'Email', autocomplete: :off %>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Password</label>
+                                <div class="control has-icons-left">
+                                    <%= f.password_field :password, class: "input", placeholder: 'Password', autocomplete: :off %>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-key"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <hr>
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <input type="submit" class="button is-primary  is-fullwidth" value="Submit">
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

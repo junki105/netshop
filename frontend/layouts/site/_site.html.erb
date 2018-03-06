@@ -17,9 +17,12 @@
               <a class="navbar-item is-active">
                 Home
               </a>
-              <a class="navbar-item">
-                Login
-              </a>
+              <% if current_user %>
+                <%= link_to 'Singout',  signout_users_sessions_path, class: 'navbar-item', method: :delete %>
+              <% else %>
+                <%= link_to 'Singup', new_users_registrations_path, class: 'navbar-item' %>
+                <%= link_to 'Singin', new_users_sessions_path, class: 'navbar-item' %>
+              <% end %>
               <a class="navbar-item">
                 <i class="fas fa-shopping-cart"></i>
               </a>
@@ -28,7 +31,7 @@
                   <div class="select is-small is-rounded">
                     <select id="selectedLocale">
                       <% [:en, :ja].each do |locale| %>
-                        <option data-url="<%= url_for Rails.application.routes.recognize_path(request.url).merge({ only_path: false, locale: locale }) %>"<%= I18n.locale == locale ? ' selected' : '' %>><%= locale %></option>
+                        <option data-url="<%= url_for(Rails.application.routes.recognize_path(request.get? ? request.url : url_for(:back)).merge({ only_path: false, locale: locale })) %>"<%= I18n.locale == locale ? ' selected' : '' %>><%= locale %></option>
                       <% end %>
                     </select>
                   </div>

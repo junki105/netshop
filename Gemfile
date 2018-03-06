@@ -44,3 +44,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "subdomain_locale"
 gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem "geoip"
+gem 'sorcery'
