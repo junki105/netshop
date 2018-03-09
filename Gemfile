@@ -45,3 +45,4 @@ gem "subdomain_locale"
 gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem "geoip"
 gem 'sorcery'
+gem 'rack-attack'

@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :init_timezone
 
   def init_category
+    p request.remote_ip
     @categories = Category.where(state: true).where(parent: nil).order(id: :asc)
   end
 

@@ -42,5 +42,7 @@ module Netshop
       g.helper false
       g.channel assets: false
     end
+
+    config.middleware.use Rack::Attack
   end
 end
