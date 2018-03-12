@@ -1,5 +1,9 @@
 ja:
   site:
+    sitename: "Online Shop"
+    meta_tag:
+      title: "%{sitename}: ショッピングを楽しむWEBサイトです"
+      description: "ショッピングサイト「%{sitename}」は、素早く、簡単に色々なものを購入できるショッピングサイトです。"
     title: "オンラインショップ"
   date:
     formats:

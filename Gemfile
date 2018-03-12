@@ -46,3 +46,4 @@ gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem "geoip"
 gem 'sorcery'
 gem 'rack-attack'
+gem 'meta-tags'

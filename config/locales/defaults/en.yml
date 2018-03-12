@@ -1,5 +1,9 @@
 en:
   site:
+    sitename: "Online Shop"
+    meta_tag:
+      title: "%{sitename}: The Shopping Website"
+      description: "This is %{sitename}. The fast and easy way to buy almost anything."
     title: "Online Shop"
   date:
     formats:
