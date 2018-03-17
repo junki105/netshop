@@ -25,3 +25,5 @@ yarn-error.log*
 .yarn-integrity
 /.bundle
 /vendor/bundle
+
+public/sitemap.xml.gz

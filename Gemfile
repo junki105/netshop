@@ -47,3 +47,5 @@ gem "geoip"
 gem 'sorcery'
 gem 'rack-attack'
 gem 'meta-tags'
+gem 'sitemap_generator'
+gem 'whenever', require: false
